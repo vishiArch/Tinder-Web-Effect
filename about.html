@@ -10,14 +10,26 @@
 </head>
 
 <body>
-    <div
-        class="pageTwo h-screen w-full flex flex-col justify-center bg-[linear-gradient(135deg,#f27057,#e4477d)] pl-[28px]">
-        <div class="head flex flex-col gap-[15px]">
-            <h1 class="text-[3rem] font-[Montserrat] leading-[45px]">Let's -<br>know you</h1>
-            <div class="line h-[2px] w-[18rem] bg-[black]"></div>
+    <div class="pageTwo h-screen w-full flex flex-col justify-center bg-[linear-gradient(135deg,#f27057,#e4477d)] pl-[28px] gap-[20px]">
+        <div class="head flex flex-col gap-[15px] relative bottom-[58px]">
+            <h1 class="text-[3rem] font-[Montserrat] leading-[45px] text-white">Let's -<br>know you</h1>
+            <div class="line h-[2px] w-[18rem] bg-[white]"></div>
         </div>
-        <div class="name">
+        <div class="name text-white relative bottom-[45px]">
             <p class="font-[Montserrat] text-[20px]">I'm</p>
+            <input type="text" placeholder="Enter Full name" class="h-[63px] w-[211px] bg-[transparent] px-7 py-3 text-base cursor-pointer border">
+        </div>
+        <div class="username text-white relative bottom-[35px]">
+            <p class="font-[Montserrat] text-[20px]">Enter Username</p>
+            <input type="text" placeholder="Enter Username" class="h-[63px] w-[211px] bg-[transparent] px-7 py-3 text-base cursor-pointer border">
+        </div>
+        <div class="BIO text-white relative bottom-[29px]">
+            <p class="font-[Montserrat] text-[20px]">Enter Your Bio</p>
+            <input type="text" class="h-[120px] w-[240px] bg-[transparent] px-7 py-3 text-base cursor-pointer border">
+        </div>
+        <div class="next flex flex-col items-center justify-center relative right-[25px] top-[18px] gap-[6px]">
+            <button class="h-[63px] w-[211px] text-[18px] bg-[linear-gradient(135deg,#f27057,#e4477d)] text-white shadow-[0_4px_10px_rgba(0,0,0,0.2)] rounded-[20px_0px_20px_0px] border">Let's Begin</button>
+            <span class="text-white text-[15px]">Skip For Now</span>
         </div>
     </div>
     <script src="script.js"></script>
