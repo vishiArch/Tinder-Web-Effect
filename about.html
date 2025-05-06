@@ -1,38 +1,43 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Let’s Know You</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
-
 <body>
-    <div class="pageTwo h-screen w-full flex flex-col justify-center bg-[linear-gradient(135deg,#f27057,#e4477d)] pl-[28px] gap-[20px]">
-        <div class="head flex flex-col gap-[15px] relative bottom-[58px]">
-            <h1 class="text-[3rem] font-[Montserrat] leading-[45px] text-white">Let's -<br>know you</h1>
-            <div class="line h-[2px] w-[18rem] bg-[white]"></div>
-        </div>
-        <div class="name text-white relative bottom-[45px]">
-            <p class="font-[Montserrat] text-[20px]">I'm</p>
-            <input type="text" placeholder="Enter Full name" class="h-[63px] w-[211px] bg-[transparent] px-7 py-3 text-base cursor-pointer border">
-        </div>
-        <div class="username text-white relative bottom-[35px]">
-            <p class="font-[Montserrat] text-[20px]">Enter Username</p>
-            <input type="text" placeholder="Enter Username" class="h-[63px] w-[211px] bg-[transparent] px-7 py-3 text-base cursor-pointer border">
-        </div>
-        <div class="BIO text-white relative bottom-[29px]">
-            <p class="font-[Montserrat] text-[20px]">Enter Your Bio</p>
-            <input type="text" class="h-[120px] w-[240px] bg-[transparent] px-7 py-3 text-base cursor-pointer border">
-        </div>
-        <div class="next flex flex-col items-center justify-center relative right-[25px] top-[18px] gap-[6px]">
-            <button class="h-[63px] w-[211px] text-[18px] bg-[linear-gradient(135deg,#f27057,#e4477d)] text-white shadow-[0_4px_10px_rgba(0,0,0,0.2)] rounded-[20px_0px_20px_0px] border">Let's Begin</button>
-            <span class="text-white text-[15px]">Skip For Now</span>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
+  <!-- Content visible only on small devices (<= 500px) -->
+  <div class="min-h-screen flex flex-col justify-start px-6 py-12 bg-gradient-to-b from-[#F15A4A] to-[#B93B7A] text-white sm:hidden">
+    <h1 class="text-3xl font-light leading-tight max-w-xs border-b border-white pb-2 mb-10">Let’s -<br />know you</h1>
+    <form class="max-w-xs w-full space-y-8">
+      <div>
+        <label for="fullname" class="block mb-2 text-base font-light">I’m,</label>
+        <input id="fullname" name="fullname" type="text" placeholder="Enter Full Name" class="w-full border border-white bg-transparent px-4 py-3 text-white placeholder-white text-base font-light focus:outline-none" />
+      </div>
+      <div>
+        <label for="username" class="block mb-2 text-base font-light">Username,</label>
+        <input id="username" name="username" type="text" placeholder="Enter Username" class="w-full border border-white bg-transparent px-4 py-3 text-white placeholder-white text-base font-light focus:outline-none" />
+      </div>
+      <div>
+        <label for="bio" class="block mb-2 text-base font-light">Enter Your Bio</label>
+        <textarea id="bio" name="bio" rows="5" placeholder="" class="w-full border border-white bg-transparent px-4 py-3 text-white placeholder-white text-base font-light resize-none focus:outline-none"></textarea>
+      </div>
+      <div class="flex flex-col items-center">
+        <button type="submit" class="w-full max-w-xs py-3 rounded-[20px_0px_20px_0px] border border-white bg-gradient-to-r from-transparent to-[#F15A4A] text-white text-base font-light transition-colors duration-300">Let's Begin</button>
+        <p class="mt-2 text-center text-xs font-light text-white cursor-pointer select-none w-full max-w-xs">Skip For Now</p>
+      </div>
+    </form>
+  </div>
 
+  <!-- Message visible only on screens larger than 500px -->
+  <div class="hidden sm:flex fixed inset-0 bg-black text-white items-center justify-center px-6 text-center">
+    <p class="text-xl sm:text-2xl font-light max-w-md">This app only works on small devices</p>
+  </div>
+</body>
 </html>
